@@ -48,7 +48,7 @@
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
 
-      <a href="index.html#reservations" class="header-cta">
+      <a href="contact.html#reservations" class="header-cta">
         Reserve a Table
       </a>
     </header>
@@ -110,6 +110,80 @@
         </article>
       </div>
     </section>
+
+
+    
+    <!-- RESERVATION FORM -->
+    <section class="reservation-section" id="reservations">
+      <span class="section-label">
+        <span class="label-line"></span>
+        YOUR TABLE AWAITS
+      </span>
+
+      <h2>Make It an Evening<br>to Remember.</h2>
+
+      <p>
+        Whether it's an intimate dinner or a special celebration,
+        we'd love to be part of your occasion.
+      </p>
+
+      <form class="reservation-form" id="reservation-form">
+        <div class="reservation-form-grid">
+          <label>
+            Your name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+
+          <label>
+            Email address
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+
+          <label>
+            Preferred date
+            <input type="date" name="date" required>
+          </label>
+
+          <label>
+            Preferred time
+            <input type="time" name="time" required>
+          </label>
+
+          <label>
+            Guests
+            <select name="guests" required>
+              <option value="">Select</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5+ guests</option>
+            </select>
+          </label>
+
+          <label>
+            Occasion
+            <select name="occasion">
+              <option>Dining experience</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Private gathering</option>
+            </select>
+          </label>
+        </div>
+
+        <button type="submit" class="button button-primary">
+          Request a Reservation
+        </button>
+
+        <p class="reservation-form-note">
+          Demonstration form only — no booking is submitted.
+        </p>
+
+        <p class="reservation-status" id="reservation-status" aria-live="polite"></p>
+      </form>
+
+    </section>
+
 
     <section class="contact-page-cta">
       <span class="section-label">

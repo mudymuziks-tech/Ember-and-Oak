@@ -75,15 +75,34 @@ a {
 }
 
 .main-nav a {
+  position: relative;
   color: var(--color-muted);
   font-size: 13px;
+  padding-bottom: 6px;
   transition: color 0.25s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
   color: var(--color-gold-light);
-  border-bottom: 2px solid var(--color-gold-light);
-  padding-bottom: 4px;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-gold-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 .header-cta {
@@ -2170,5 +2189,13 @@ a:focus-visible {
 }
 
 
+/* HOMEPAGE MENU PREVIEW */
+.home-menu-preview .menu-grid {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
 
-
+.home-menu-preview .dish-card {
+  width: 100%;
+  max-width: 650px;
+}
